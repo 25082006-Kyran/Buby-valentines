@@ -1,0 +1,180 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #ffcccb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Heart animation */
+.heart {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url('https://cdn.pixabay.com/photo/2016/10/29/03/48/heart-1780563_960_720.png') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    animation: moveHeart 3s infinite alternate;
+}
+
+/* Message styling */
+.message {
+    text-align: center;
+    font-size: 2rem;
+    color: #d50000;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+button {
+    background: #ff6f61;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d40000;
+}
+
+/* Heart Movement Animation */
+@keyframes moveHeart {
+    0% {
+        top: 10%;
+        left: 10%;
+    }
+    100% {
+        top: 80%;
+        left: 80%;
+    }
+}
+
+/* Love Note Styling */
+.love-note {
+    text-align: center;
+    color: #d50000;
+    padding: 20px;
+}
+
+/* Photos styling */
+.photos img {
+    width: 250px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+img {
+    max-width: 100%; /* Ensures the image is never wider than its container */
+    height: auto;    /* Keeps the image's aspect ratio */
+}
+
+/* Image hover effect */
+.photos img:hover {
+    transform: scale(1.1);
+}
+
+/* Love Letter Styling */
+.letter {
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Container Styling */
+.container {
+    width: auto;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Adjust message font size */
+    .message {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    /* Adjust heart size */
+    .heart {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Adjust letter font size */
+    .letter {
+        font-size: 18px;
+    }
+
+    /* Adjust photo image size for mobile */
+    .photos img {
+        width: 200px;
+    }
+
+    /* Reduce padding for container on smaller screens */
+    .container {
+        padding: 5%;
+    }
+
+    /* Adjust button size */
+    button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust message font size */
+    .message {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    /* Adjust heart size */
+    .heart {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Adjust letter font size */
+    .letter {
+        font-size: 16px;
+    }
+
+    /* Adjust photo image size further */
+    .photos img {
+        width: 150px;
+    }
+
+    /* Adjust button font size and padding */
+    button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    /* Adjust container padding */
+    .container {
+        padding: 4%;
+    }
+}
